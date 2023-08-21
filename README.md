@@ -74,3 +74,23 @@ Or specify a different configuration:
 ```shell
 dakka ask -c weather "Do I need an umbrella today in Manhattan?"
 ```
+
+# Contributing
+
+```shell
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python setup.py develop
+```
+
+### Uploading
+
+```shell
+# Update version in setup.py
+rm -rf build dist
+python setup.py sdist bdist_wheel
+twine upload dist/*
+```
+
+# TODO
